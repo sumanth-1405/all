@@ -1,0 +1,22 @@
+package com.stackroute.exercise3;
+
+public class TryCatch {
+	TryCatch(String msg) 
+	{ 
+		 msg = "this is bound to execute";
+	        System.out.println(msg);
+	} 
+	
+	
+	public static void main(String[] args)throws Exception { 
+		try { 
+				throw new Exception();  
+		     }catch(Exception e) { 
+		    	 System.out.println(e.getMessage());
+			} 
+			finally 
+			{ 
+				System.out.println("iam here"); 
+				} 
+} 
+}

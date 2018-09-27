@@ -1,0 +1,45 @@
+package com.stackroute.userprofile.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+import com.stackroute.userprofile.domain.UserProfile;
+import com.stackroute.userprofile.exceptions.EmailAlreadyExistsException;
+import com.stackroute.userprofile.repository.UserProfileRepository;
+
+@Service
+@Primary
+public class UserProfileServicesImpl implements UserProfileServices{
+	
+	
+	private UserProfileRepository userProfileRepository;
+
+	@Autowired
+	public UserProfileServicesImpl(UserProfileRepository userProfileRepository) {
+		this.userProfileRepository=userProfileRepository;
+	}
+
+	@Override
+	public UserProfile saveUser(UserProfile user,String userEmail) throws EmailAlreadyExistsException  {
+		UserProfile userProfile = userProfileRepository.getUserByUserEmail(userEmail);
+		if(userProfile==null) {
+			 userProfileRepository.save(user);
+			return user;
+		}
+		else 
+			throw new EmailAlreadyExistsException("Email already present");	
+	}
+	}
+
+@Override
+public Movie saveMovie(Movie movie) {
+	List<Movie> movieList = (List<Movie>) movieRepository.findAll();
+	if(movieList.contains(movie)) {
+		return null;
+	}
+	else {
+		Movie saveMovie = movieRepository.save(movie);
+		return saveMovie;
+	}
+}

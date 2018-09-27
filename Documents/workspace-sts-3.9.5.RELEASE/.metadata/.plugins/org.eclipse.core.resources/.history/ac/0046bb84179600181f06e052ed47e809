@@ -1,0 +1,5 @@
+package com.stackroute.movieservice.config;
+
+public class SwaggerConfig {
+
+}

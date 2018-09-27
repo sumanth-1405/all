@@ -1,0 +1,43 @@
+package com.stackroute.exercise4;
+
+import java.util.Scanner;
+
+public class Occurences {
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		String input = sc.nextLine();
+		char[] ch = input.toCharArray();
+		System.out.println("enter a character to find it's occurences");
+		String c=sc.next();
+		char key=c.charAt(0);
+		int index = 0;
+		int count = counter(input,key,index);
+		sc.close();
+		System.out.println(count);
+	}
+
+	private static int counter(char[] input,char cd,int index) {	
+		
+		int index = 0,count=0;
+		if(cd==input[index]) {
+			count+=count;
+		}else {
+			index++;counter()
+			
+		}
+
+		return 0;
+	}
+//public static int counter(String keyS,String key,int i) {
+//	if(keyS.contains(key)) {
+//		int index = keyS.indexOf(key);
+//		i++;
+//		keyS =  keyS.substring(index+1);
+//		i = counter(keyS, key, i);
+//	}
+//	return i;
+//}
+
+
+}

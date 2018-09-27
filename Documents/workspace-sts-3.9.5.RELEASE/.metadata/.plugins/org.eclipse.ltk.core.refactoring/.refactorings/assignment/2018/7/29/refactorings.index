@@ -1,0 +1,25 @@
+1531896256758	Delete element
+1531904202929	Rename type 'assigningServer'
+1531908471078	Rename type 'AssigningServer'
+1531908488312	Rename type 'splitCategory'
+1531908540412	Rename type 'takingOrder'
+1532060139616	Copy compilation unit
+1532060147083	Delete element
+1532060159407	Move compilation unit
+1532060322327	Rename compilation unit 'LandToy.java'
+1532062570513	Rename compilation unit 'LandToys.java'
+1532063108326	Rename type 'Flyers'
+1532075932939	Move type
+1532075936870	Move type
+1532075952112	Copy compilation unit
+1532075999894	Delete element
+1532076219995	Rename type 'MovingToys'
+1532076294854	Rename type 'FlyerToys'
+1532076461612	Delete element
+1532078498385	Rename type 'FlyingToysImpl'
+1532078624786	Rename type 'Flyable'
+1532078634760	Rename type 'FlyingToy'
+1532078656115	Rename type 'MovingToy'
+1532078685399	Rename type 'MovingToysImpl'
+1532078752783	Rename type 'BaseToy'
+1532078909493	Rename type 'Toy'

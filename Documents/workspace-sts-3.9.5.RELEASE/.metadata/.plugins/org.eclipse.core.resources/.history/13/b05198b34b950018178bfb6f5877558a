@@ -1,0 +1,29 @@
+package com.stackroute.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.stackroute.movieservice.domain.Movie;
+import com.stackroute.movieservice.repository.MovieRepository;
+
+public class MovieServiceImpl implements MovieService {
+	MovieRepository movieRepository;
+	
+	@Autowired
+	public MovieServiceImpl(MovieRepository movieRepository) {
+		this.movieRepository=movieRepository;
+	}
+	
+	@Override
+	public Movie saveMovie() {
+
+		return null;
+	}
+	@Override
+	public List<Movie> getAllMovies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

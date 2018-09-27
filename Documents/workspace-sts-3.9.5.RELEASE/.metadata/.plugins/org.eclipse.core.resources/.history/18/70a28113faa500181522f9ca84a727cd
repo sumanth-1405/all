@@ -1,0 +1,31 @@
+package com.stackroute.userprofile.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+import com.stackroute.userprofile.domain.UserProfile;
+import com.stackroute.userprofile.repository.UserProfileRepository;
+
+@Service
+@Primary
+public class UserProfileServicesImpl implements UserProfileServices{
+	
+	
+	private UserProfileRepository userProfileRepository;
+
+	@Autowired
+	public UserProfileServicesImpl(UserProfileRepository userProfileRepository) {
+		this.userProfileRepository=userProfileRepository;
+	}
+
+	@Override
+	public UserProfile saveUser(UserProfile user){
+		if(userProfileRepository.getByUserEmail(user.getUserEmail()).size()==0) {
+			UserProfile savedUser=userProfileRepository.save(user);
+			return savedUser;
+		}
+		else 
+			return null;
+	}
+	}

@@ -1,0 +1,14 @@
+package com.stackroute.movieservice.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.stackroute.movieservice.domain.Movie;
+
+public interface MovieService {
+	public Movie saveMovie(Movie movie);
+	public Movie updateMovie(Movie movie);
+	public boolean deleteMovie(int movieId);
+	public Optional<Movie> getById(int movieId);
+	public List<Movie> getAllMovies();
+}

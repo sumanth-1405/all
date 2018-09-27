@@ -1,0 +1,46 @@
+package com.stackroute.userprofile.controller;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.stackroute.userprofile.domain.UserProfile;
+import com.stackroute.userprofile.service.UserProfileServices;
+
+@RunWith(SpringRunner.class)
+@WebMvcTest(UserProfileController.class)
+public class UserProfileControllerTests {
+	
+	private MockMvc userProfileMockMvc;
+	
+	@MockBean
+	private UserProfileServices userProfileServices;
+	
+	@InjectMocks
+	private UserProfileController userProfileController;
+	
+	private UserProfile userProfile;
+	static List<UserProfile> userProfiles;
+	
+	@Before
+	public void setup() throws Exception {
+		
+		MockitoAnnotations.initMocks(this);
+		
+		userProfileMockMvc = MockMvcBuilders.standaloneSetup(userProfileController)
+	}
+
+	@Test
+	public void contextLoads() {
+	}
+
+}

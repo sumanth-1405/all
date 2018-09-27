@@ -1,0 +1,20 @@
+package com.stackroute.services;
+
+import java.util.List;
+
+import com.stackroute.movieservice.domain.Movie;
+
+public class MovieServiceImpl implements MovieService {
+	
+	@Override
+	public Movie saveMovie() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Movie> getAllMovies() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

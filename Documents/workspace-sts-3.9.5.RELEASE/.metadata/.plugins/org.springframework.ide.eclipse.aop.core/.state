@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="zuul-apigateway"/>
+<aop-project name="order-details"/>
+<aop-project name="recommendation"/>
+<aop-project name="payment-service"/>
+<aop-project name="eureka-server"/>
+<aop-project name="user-profile"/>
+<aop-project name="user-login"/>
+<aop-project name="configuration-service"/>
+<aop-project name="logistics-service"/>
+<aop-project name="cvrp-service"/>
+<aop-project name="book-service"/>
+</aop-reference-model>

@@ -1,0 +1,46 @@
+package com.stackroute.userprofile.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.stackroute.userprofile.domain.UserProfile;
+import com.stackroute.userprofile.exceptions.EmailAlreadyExistsException;
+import com.stackroute.userprofile.service.UserProfileServices;
+
+@RestController
+@RequestMapping("/api/v1/")
+public class UserProfileController {
+	
+	private UserProfileServices userProfileServicesImpl;
+	
+	@Autowired
+	public UserProfileController(UserProfileServices userProfileServicesImpl) {
+		this.userProfileServicesImpl=userProfileServicesImpl;
+	}
+
+	
+	@RequestMapping(value="save/{userEmail}" , method=RequestMethod.POST , produces="application/json")
+	public ResponseEntity<?> saveMovie(@RequestBody UserProfile user,String userEmail){	
+		try {
+			userProfileServicesImpl.saveUser(user,userEmail);
+			return false;
+		}
+			return new ResponseEntity<String>("user added",HttpStatus.OK);		
+	}	
+	
+	@RequestMapping(value="save/checkuseremail/{userEmail}" , method=RequestMethod.GET, produces="application/json")
+		public boolean checkEmail(@PathVariable("userEmail") String userEmail) {
+			try {
+				userProfileServicesImpl.checkForEmail(userEmail);
+				return false;
+			} catch (EmailAlreadyExistsException e) {
+				return true;
+			}
+	}
+		}

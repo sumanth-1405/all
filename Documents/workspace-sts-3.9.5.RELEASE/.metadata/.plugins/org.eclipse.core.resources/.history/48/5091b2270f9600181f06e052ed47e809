@@ -1,0 +1,18 @@
+package com.stackroute.movieservice.services;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.stackroute.movieservice.domain.Movie;
+
+public interface MovieService {
+	public Movie saveMovie(Movie movie);
+	public Movie updateMovie(int movieId,Movie movie);
+	public Movie deleteMovie(int movieId);
+	public Movie getById(int movieId);
+	public List<Movie> getAllMovies();
+	@Query("select movie from Movie movie where movie.movieTitle like moviename%")
+	public List<Movie> getMovieByTitle(@Param("moviename")String movieTitle);
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;MovieBoot&apos;&#x0A;- Original project: &apos;MovieBoot&apos;&#x0A;- Original element: &apos;MovieBoot/src/main/java/com.stackroute.movieboot.config&apos;" description="Delete element" element1="/src\/main\/java&lt;com.stackroute.movieboot.config" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1533193743952" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package com.stackroute.services;
+
+import java.util.List;
+
+import com.stackroute.movieservice.domain.Movie;
+
+public interface MovieService {
+	public Movie saveMovie();
+	public List<Movie> getAllMovies();
+}

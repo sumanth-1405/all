@@ -1,0 +1,64 @@
+package com.stackroute.movieservice.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.stackroute.movieservice.domain.Movie;
+import com.stackroute.movieservice.repository.MovieRepository;
+
+@Service
+public class MovieServiceImpl implements MovieService {
+	MovieRepository movieRepository;
+
+	@Autowired
+	public MovieServiceImpl(MovieRepository movieRepository) {
+		this.movieRepository = movieRepository;
+	}
+
+	@Override
+	public Movie saveMovie(Movie movie) {
+		Movie savedmovie = movieRepository.save(movie);
+		return savedmovie;
+	}
+
+	@Override
+	public List<Movie> getAllMovies() {
+		List<Movie> movieList = (List<Movie>) movieRepository.findAll();
+		return movieList;
+	}
+
+	@Override
+	public Movie updateMovie(int movieId,Movie movie) {
+		Optional<Movie> updatedmovie = movieRepository.findById(movieId);
+		Movie movieObj=updatedmovie.save(movie);
+		return movieObj;
+	}
+
+	@Override
+	public Movie deleteMovie(int movieId) {
+		Optional<Movie> movie = movieRepository.findById(movieId);
+		movieRepository.deleteById(movieId);
+		return movie.get();
+	}
+
+	@Override
+	public Movie getById(int movieId) {
+		Optional<Movie> movie = movieRepository.findById(movieId);
+		return movie.get();
+	}
+
+//	@Override
+//	public Movie getByTitle(String movieTitle) {
+//		boolean bool=false;
+//		bool=movieRepository.findAll(movieTitle);
+//		if(bool) {
+//			
+//		return movie;
+//		}
+//		return null
+//	}
+
+}

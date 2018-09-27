@@ -1,0 +1,27 @@
+package com.stackroute.userprofile.domain;
+
+import java.util.ArrayList;
+
+import javax.persistence.Id;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Document
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+public class UserProfile {
+	@Id
+	private String userName;
+	private String userEmail;
+	private String userDob;
+	private String userPassword;
+	private ArrayList userPreferences;
+	
+}

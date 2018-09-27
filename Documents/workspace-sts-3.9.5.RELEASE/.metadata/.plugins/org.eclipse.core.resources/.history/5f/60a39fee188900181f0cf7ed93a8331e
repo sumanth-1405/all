@@ -1,0 +1,22 @@
+package com.stackroute.exercise3;
+
+public class TryCatch {
+	TryCatch(String exc) 
+	{ 
+	  exc="this statement is catched";
+	  System.out.println(exc);
+	} 
+	
+	
+	public static void main(String[] args)throws Exception { 
+		try { 
+				throw new Exception();  
+		     }catch(Exception e) { 
+		    	 System.out.println(e.getmessage());
+			} 
+			finally 
+			{ 
+				System.out.println("iam here"); 
+				} 
+} 
+}

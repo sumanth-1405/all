@@ -1,0 +1,49 @@
+package com.stackroute.exercise4;
+
+import java.util.Scanner;
+
+public class SubString {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String input=sc.next();
+		char[] splitted=splitString(input);
+		for(int i=0;i<splitted.length;i++) {
+		System.out.println(splitted);}
+		//String[] get=getSub(splitted);
+		
+		
+		
+		sc.close();
+	}
+
+//	private static String[] getSub(char[] splitted) {
+//
+//		for(int i=0;i<input.length();i++) {
+//			if((input.charAt(i))==(x|y)) {
+//				
+//			}
+//		}
+//		return null;
+//	}
+
+	private static char[] splitString(String input) {
+		char[] result=new char[1];
+		char[] ch=input.toCharArray();
+		for(int i=0;i<ch.length;i++) {
+			char x=input.charAt(0);
+			if(x==(input.charAt(i))){
+				result[i]=x;
+				break;
+			}else {
+				char y=input.charAt(i);
+				result[i]=y;
+				break;
+			}
+		}
+		
+		return result;
+	}
+	
+	
+
+}

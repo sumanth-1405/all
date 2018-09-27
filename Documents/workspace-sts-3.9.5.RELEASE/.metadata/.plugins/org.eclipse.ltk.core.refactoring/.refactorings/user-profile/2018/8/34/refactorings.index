@@ -1,0 +1,14 @@
+1534753580293	Delete element
+1534756989550	Rename type 'UserProfileNotFound'
+1534757275228	Rename type 'UserProfileNotFoundException'
+1534757338262	Rename type 'UserNotFoundException'
+1534828574933	Delete element
+1534848172968	Encapsulate field 'userEmail'
+1534914790015	Rename compilation unit 'EmailAlreadyExixtsException.java'
+1534928547295	Delete element
+1534932255618	Encapsulate field 'userEmail'
+1534996479521	Rename type 'BootStrapData'
+1535004366126	Delete element
+1535023163399	Rename package 'com.stackroute.userprofile'
+1535023206087	Rename package 'com.stackroute.userprofile.services'
+1535023240901	Rename type 'UserProfileApplicationTests'

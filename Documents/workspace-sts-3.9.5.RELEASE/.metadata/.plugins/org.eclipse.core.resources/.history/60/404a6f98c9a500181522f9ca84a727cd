@@ -1,0 +1,5 @@
+package com.stackroute.userprofile.exceptions;
+
+public class EmailAlreadyExixtsException extends Exception {
+
+}
